@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>copy_that_website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="https://allstarcode.org/">
+            <img src="images/ASC-SQ-Logo-1.png" alt="All Star Codes">
+        </a>
+        <h1>Zhejie Jiang</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education/Experience</a></li>
+                <li><a href="#contact">Hobbies</a></li>
+                <li><a href="#hobbies">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="image-section">
+            <img src="images/about me.jpg">
+            <div id="about">
+                <h2>About Me</h2>
+                <p>Hello, I'm Zhejie Jiang, also known as Jacky.</p>
+                <p>Welcome to my website! I'm passionate about coding,</p>
+                <p> web development, and game design. </p>
+            </div>
+        </div>
+
+        <div class="image-section">
+            <img src="images/project.png">
+            <div id="projects">
+                <h2>Projects</h2>
+                <p>//View Projects here</p>
+                <a href="https://fakepage........../">!Click Here!</a>
+            </div>
+        </div>
+
+        <div class="image-section">
+            <img src="images/education:experience.jpg">
+            <div id="education">
+                <h2>Education/Experience</h2>
+                <h4>Education</h4>
+                <p>I am a rising senior in highschool</p>
+                <h4>Experience</h4>
+                <p>Past Internship: CS4ALL</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="hobbies">
+        <h2>Hobbies</h2>
+        <p>Badminton, Basketball, Chess, Cross Country, and many more</p>
+
+        <div class="slider">
+            <img src="images/badminton.jpg" alt="badminton">
+            <img src="images/basketball.jpg" alt="basketball">
+            <img src="images/chess.jpg" alt="chess">
+            <img src="images/XC.jpg" alt="Cross Country">
+        </div>
+    </div>
+    <div id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: zhejiejiang@gmail.com</p>
+        <p>Phone Number: 911</p>
+
+    </div>
+    <footer>
+        <p>&copy; 2023 Zhejie Jiang. All rights reserved.</p>
+    </footer>
+
+    <!-- Place the JavaScript script at the bottom of the body -->
+    <script>
+        const slider = document.querySelector(".slider");
+        const images = slider.querySelectorAll("img");
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            images.forEach((img, idx) => {
+                img.style.display = idx === index ? "block" : "none";
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % images.length;
+            showSlide(currentSlide);
+        }
+
+        
+        showSlide(currentSlide);
+
+        setInterval(nextSlide, 3000); 
+    </script>
+</body>
+</html>
