@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>copy_that_website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="https://allstarcode.org/" class="image-section">
+            <img src="images/ASC-SQ-Logo-1.png" alt="All Star Codes">
+        </a>
+        <h1>Zhejie Jiang</h1>
+        <nav>
+            <button class="nav" id="homeButton">Home</button>
+            <button class="nav" id="aboutButton">About</button>
+            <button class="nav" id="projectsButton">Projects</button>
+            <button class="nav" id="eEButton">Education/Experience</button>
+            <button class="nav" id="hobbiesButton">Hobbies</button>
+            <button class="nav" id="contactButton">Contact</button>
+        </nav>
+    </header>
+    <main>
+        <div class="image-section" id="about">
+            <img src="images/about me.jpg">
+            <div id="about">
+                <h2>About Me</h2>
+                <p>Hello, I'm Zhejie Jiang, also known as Jacky.</p>
+                <p>Welcome to my website! I'm passionate about coding,</p>
+                <p> web development, and game design. </p>
+            </div>
+        </div>
+
+        <div class="image-section" id="projects">
+            <img src="images/project.png">
+            <div id="projects">
+                <h2>Projects</h2>
+                <p>//View Projects here</p>
+                <a href="https://fakepage........../">!Click Here!</a>
+            </div>
+        </div>
+
+        <div class="image-section" id="education">
+            <img src="images/education:experience.jpg">
+            <div id="education">
+                <h2>Education/Experience</h2>
+                <h4>Education</h4>
+                <p>I am a rising senior in highschool</p>
+                <h4>Experience</h4>
+                <p>Past Internship: CS4ALL</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="hobbies">
+        <h2>Hobbies</h2>
+        <p>Badminton, Basketball, Chess, Cross Country, and many more</p>
+
+        <div class="slider">
+            <img src="images/badminton.jpg" alt="badminton">
+            <img src="images/basketball.jpg" alt="basketball">
+            <img src="images/chess.jpg" alt="chess">
+            <img src="images/XC.jpg" alt="Cross Country">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Zhejie Jiang. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+    document.getElementById("contactButton").addEventListener("click", function() {
+        window.location.href = "contact.html";});
+    document.getElementById("homeButton").addEventListener("click", function() {
+        alert("You are already on this page");});
+        
+    document.getElementById("aboutButton").addEventListener("click", function() {
+        document.getElementById("about").scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById("projectsButton").addEventListener("click", function() {
+        document.getElementById("projects").scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById("eEButton").addEventListener("click", function() {
+        document.getElementById("education").scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById("hobbiesButton").addEventListener("click", function() {
+        document.getElementById("hobbies").scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    </script>
+</body>
+</html>

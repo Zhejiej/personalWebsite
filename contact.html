@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+        <a href="https://allstarcode.org/">
+            <img src="images/ASC-SQ-Logo-1.png" alt="All Star Codes">
+        </a>
+        <h1>Zhejie Jiang</h1>
+        <nav>
+            <button class="nav" id="homeButton">Home</button>
+            <button class="nav" id="aboutButton">About</button>
+            <button class="nav" id="projectsButton">Projects</button>
+            <button class="nav" id="eEButton">Education/Experience</button>
+            <button class="nav" id="hobbiesButton">Hobbies</button>
+            <button class="nav" id="contactButton">Contact</button>
+        </nav>
+    </header>
+    <h1>Contact Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="name">Enter Your First and Last Name:</label>
+            <input id="name" type="text" required />
+        </div>
+        <div class="form-group">
+            <label for="email">Enter Your Email:</label>
+            <input id="email" type="email" required pattern=".*@.*" />
+        </div>
+        <div class="form-group">
+            <label for="text">Write the text you want to send to me!</label>
+            <textarea id="text" required></textarea>
+        </div>
+        <input type="submit" value="Submit" id="submit" />
+    </form>
+    <br>
+    <h2>Or</h2>
+    <h1>Reach out to me through</h1>
+    <div id="contact">
+        <p>Email: zhejiejiang@gmail.com</p>
+        <p>Phone Number: 911</p>
+    </div>
+<script>
+    //Buttons taking you to the pages
+    document.getElementById("homeButton").addEventListener("click", function() {
+        window.location.href = "index.html";
+    });
+
+    document.getElementById("contactButton").addEventListener("click", function() {
+        alert("You are already on this page");
+    });
+
+    function validateForm() {
+        var nameInput = document.getElementById("name");
+        var emailInput = document.getElementById("email");
+        var textInput = document.getElementById("text");
+
+        if (nameInput.value.trim() === "") {
+            alert("Please enter your name.");
+            return false;
+        }
+
+        if (!isValidEmail(emailInput.value)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        if (textInput.value.trim() === "") {
+            alert("Please write your message.");
+            return false;
+        }
+
+        // If all validations pass, show "Thank you" message
+        showThankYouMessage();
+        return false; // Prevent form submission
+    }
+
+    function isValidEmail(email) {
+        // Basic email validation using regex
+        var emailPattern = /^\S+@\S+\.\S+$/;
+        return emailPattern.test(email);
+    }
+
+    function showThankYouMessage() {
+        alert("Thank you for sending the form! We will get back to you soon.");
+        window.location.href = "contact.html";
+
+    }
+</script>
+</body>
+</html>
